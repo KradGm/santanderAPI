@@ -32,6 +32,10 @@ public class User {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<News> news;
 
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<History> history;
+
+
     public Long getId() {
         return id;
     }
@@ -79,5 +83,9 @@ public class User {
     public void setNews(List<News> news) {
         this.news = news;
     }
+
+    public List<History> getHistory() {return  history;}
+
+    public void setHistory(List<History> history){this.history = history;}
 
 }
