@@ -14,10 +14,10 @@ import java.net.URI;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/users")
-@Tag(name = "Users Controller", description = "RESTful API for managing users.")
+@Tag(name = "Users Controller", description = "RESTFUL API for managing users.")
 public record UserController(UserService userService) {
 
     @GetMapping
